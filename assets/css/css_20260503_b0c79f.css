@@ -1,0 +1,244 @@
+/* ===== تنسيقات عامة ===== */
+:root {
+    --primary-color: #0d6efd;
+    --secondary-color: #6c757d;
+    --success-color: #198754;
+    --danger-color: #dc3545;
+    --warning-color: #ffc107;
+    --info-color: #0dcaf0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+/* ===== تأثيرات البطاقات ===== */
+.hover-shadow {
+    transition: all 0.3s ease-in-out;
+}
+
+.hover-shadow:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15) !important;
+}
+
+.card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.card-img-top {
+    transition: transform 0.5s ease;
+}
+
+.hover-shadow:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+/* ===== شارات التصنيفات ===== */
+.badge {
+    padding: 8px 15px;
+    font-weight: 500;
+    font-size: 0.85rem;
+    border-radius: 20px;
+}
+
+.badge-tech {
+    background-color: #0d6efd;
+}
+
+.badge-culture {
+    background-color: #6f42c1;
+}
+
+.badge-sports {
+    background-color: #dc3545;
+}
+
+.badge-music {
+    background-color: #198754;
+}
+
+.badge-science {
+    background-color: #0dcaf0;
+}
+
+/* ===== تنبيهات مخصصة ===== */
+.alert {
+    border: none;
+    border-radius: 12px;
+    animation: slideInDown 0.4s ease;
+}
+
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== شريط التنقل ===== */
+.navbar {
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.nav-link {
+    font-weight: 500;
+    padding: 0.5rem 1rem !important;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-link.active {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* ===== نماذج ===== */
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.2);
+}
+
+.input-group-text {
+    background-color: #f8f9fa;
+    border-left: none;
+}
+
+/* ===== أزرار ===== */
+.btn {
+    border-radius: 10px;
+    font-weight: 500;
+    padding: 0.6rem 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #0d6efd, #0b5ed7);
+    border: none;
+}
+
+.btn-success {
+    background: linear-gradient(135deg, #198754, #157347);
+    border: none;
+}
+
+/* ===== Modal ===== */
+.modal-content {
+    border: none;
+    border-radius: 20px;
+}
+
+.modal-header {
+    background: linear-gradient(135deg, #0d6efd, #0b5ed7);
+    color: white;
+    border-radius: 20px 20px 0 0;
+}
+
+.modal-header .btn-close {
+    filter: brightness(0) invert(1);
+}
+
+/* ===== Footer ===== */
+footer {
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    margin-top: auto;
+}
+
+/* ===== صفحة تفاصيل الفعالية ===== */
+.event-detail-image {
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.related-event-card .card {
+    transition: all 0.3s ease;
+}
+
+.related-event-card .card:hover {
+    transform: translateX(-5px);
+}
+
+/* ===== شريط البحث ===== */
+.filter-card {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== تجاوب ===== */
+@media (max-width: 991.98px) {
+    .navbar-nav {
+        padding: 1rem 0;
+    }
+    
+    .nav-link {
+        padding: 0.75rem 1rem !important;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .card-img-top {
+        height: 180px !important;
+    }
+    
+    .display-4 {
+        font-size: 2.2rem;
+    }
+    
+    .event-detail-image {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .card-img-top {
+        height: 200px !important;
+    }
+    
+    .display-4 {
+        font-size: 1.8rem;
+    }
+    
+    .btn {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* ===== طباعة ===== */
+@media print {
+    .navbar,
+    footer,
+    .btn,
+    .modal {
+        display: none !important;
+    }
+}
