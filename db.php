@@ -7,15 +7,20 @@
  */
 
 //define('DB_HOST', 'localhost');
-define('DB_HOST', '127.0.0.1:3307');
+// define('DB_HOST', '127.0.0.1:3307');
 
-define('DB_NAME', 'city_events');
-define('DB_USER', 'root');
-define('DB_PASS', '');
+// define('DB_NAME', 'city_events');
+// define('DB_USER', 'root');
+// define('DB_PASS', '');
+// define('DB_CHARSET', 'utf8mb4');
+define('DB_HOST',    'sql302.infinityfree.com');
+define('DB_PORT',    '3306');
+define('DB_NAME',    'if0_41861627_city_events');
+define('DB_USER',    'if0_41861627');
+define('DB_PASS',    'f60p971ZwYFJwha');
 define('DB_CHARSET', 'utf8mb4');
 
-$dsn = "mysql:host=" . DB_HOST . ";dbname=" . DB_NAME . ";charset=" . DB_CHARSET;
-
+$dsn = "mysql:host=" . DB_HOST . ";port=" . DB_PORT . ";dbname=" . DB_NAME . ";charset=" . DB_CHARSET;
 $options = [
     PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
